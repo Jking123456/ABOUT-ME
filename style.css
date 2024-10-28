@@ -162,16 +162,16 @@ nav a:active{
 
 @keyframes words{
     0%, 20%{
-        content: "Cracker";
+        content: "Kang Turu";
     }
     21%, 40%{
-        content: "Tukang Turu";
+        content: "Reverse Engineering";
     }
     41%, 60%{
         content: "Developer";
     }
     61%, 80%{
-        content: "Tukang Galau";
+        content: "Ethical Hacking";
     }
     81%, 100%{
         content: "Web Designer";
