@@ -2,189 +2,472 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bidzz Official - Software Developer, Reverse Engineer, and Tech Enthusiast">
-    <meta name="keywords" content="BIDZZ, developer, ethical hacking, reverse engineering, web designer">
-    <meta name="author" content="BIDZZ">
-    <meta name="theme-color" content="#3498db">
-    <meta property="og:title" content="Bidzz Official">
-    <meta property="og:description" content="Software Developer, Reverse Engineer, and Tech Enthusiast">
-    <meta property="og:image" content="Bidzz.png">
-    <meta property="og:url" content="https://bidzz-rawr.github.io/ABOUT-ME">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Bidzz Official</title>
     
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="Bidzz.png" type="image/x-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/css-style.css">
+    <link rel="stylesheet" href="css/css-dark-mode.css">
+    
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Particle.js -->
+    <script src="js/2.0.0-particles.min.js"></script>
     
-    <!-- Required Libraries -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
+    <!-- Tilt.js -->
+    <script src="js/1.7.0-vanilla-tilt.min.js"></script>
     
-    <title>ABOUT Bidzz Official</title>
+    <!-- GSAP -->
+    <script src="js/3.7.1-gsap.min.js"></script>
+    
+    <!-- ScrollTrigger -->
+    <script src="js/3.7.1-ScrollTrigger.min.js"></script>
+
+    <!-- Add in head section -->
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="googlebot" content="noindex,nofollow">
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="loader">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- Background Music -->
-    <audio id="bgMusic" loop autoplay preload="auto">
-        <source src="galau.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    
-    <!-- Sound Toggle Button -->
-    <button id="soundToggle" class="sound-toggle" aria-label="Toggle Sound">
-        <i class="fas fa-volume-up"></i>
-    </button>
-
-    <!-- Header Section -->
-    <header id="header">
-        <a href="#" class="logo">Bidzz Official</a>
-        
-        <button class="nav-toggle" aria-label="Toggle Navigation">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Bidzz Official 🇮🇩</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#countdown">Event</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <button class="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
+    </nav>
 
-        <nav id="primary-navigation">
-            <a href="#" class="active">Home</a>
-            <a href="https://muhammadabid7.github.io/payment" target="_blank" rel="noopener">Payment</a>
-            <a href="https://t.me/cheatbybidzz" target="_blank" rel="noopener">Channel</a>
-            <a href="https://youtube.com/@BidzzOFC" target="_blank" rel="noopener">Education</a>
-            <a href="https://open.spotify.com/playlist/3MnO75FZNxJGNAQRt3lExM?si=TvCz0E8lT2yhE6YCQqtlBw" target="_blank" rel="noopener">My Playlist</a>
-            <a href="https://t.me/bidzz7" target="_blank" rel="noopener">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <section id="home" class="home">
-            <div class="home-container">
-                <div class="profile-section">
-                    <!-- Profile Image -->
-                    <div class="home-img" data-tilt data-tilt-max="20">
-                        <img src="Bidzz.png" alt="BIDZZ Profile Picture" loading="lazy">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="profile-container" data-aos="fade-right">
+                <div class="profile-wrapper" data-tilt>
+                    <div class="profile-image" oncontextmenu="return false">
+                        <img src="images/bidzz.png" alt="Bidzz" draggable="false" oncontextmenu="return false" onselectstart="return false" onkeydown="return false">
                     </div>
-                    
-                    <!-- Profile Content -->
-                    <div class="home-content">
-                        <h1>Hi, I'm <span class="highlight">Bidzz</span></h1>
-                        <div class="typing-container">
-                            <h2>I'm a <span class="typing"></span></h2>
-                        </div>
-                        
-                        <p class="bio">
-                            I am an ordinary person who likes things related to technology and happens to be lucky 
+                    <div class="profile-circle"></div>
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+            <div class="hero-text" data-aos="fade-left">
+                <div class="greeting">
+                    <span class="wave">&#128075;</span>
+                    <span class="age-tag">18 years old</span>
+                </div>
+                <h1>Hey, I'm Bidzz</h1>
+                <div class="typing-text">
+                    I like <span class="typed-text"></span>
+                </div>
+                <p class="hero-description">Owner of Bidzz Official community</p>
+                <div class="btn-container" data-aos="fade-up">
+    <a href="https://cv-muhammad-abid.netlify.app" class="btn primary">MY CV <i class="fas fa-briefcase"></i></a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="countdown" class="countdown">
+    <div class="container">
+        <div class="countdown-content">
+            <div class="event-poster" data-aos="fade-right">
+                <img src="images/logo-kebangsaanWkwk.png" alt="CodeFest 2025 Poster">
+            </div>
+            <div class="event-info" data-aos="fade-left">
+                <h2 class="event-title">Challenge Event</h2>
+                <p class="event-description">Join our next big event organized by Bidzz Official!</p>
+                <div class="countdown-timer">
+                    <div class="timer-box">
+                        <span id="days">00</span>
+                        <span class="timer-label">Days</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours">00</span>
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes">00</span>
+                        <span class="timer-label">Minutes</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds">00</span>
+                        <span class="timer-label">Seconds</span>
+                    </div>
+                </div>
+                
+        </div>
+    </div>
+    <script>
+        // Countdown timer logic remains unchanged
+const countdownDate = new Date("May 8, 2030 20:00:00").getTime();
+const updateCountdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").textContent = days.toString().padStart(2, '0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    if (distance < 0) {
+        clearInterval(updateCountdown);
+        document.querySelector(".countdown-timer").innerHTML = "<p>Event has started!";
+    }
+}, 1000);
+    </script>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-grid">
+                <!-- Profile Info Card -->
+                <div class="about-card main-info" data-aos="fade-up">
+                    <div class="card-header">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>Who I Am</h3>
+                    </div>
+                    <div class="profile-info">
+                        <ul class="info-list">
+                            <li><span>Name:</span>Muhammad Abid Feriwijaya Hervian</li>
+                            <li><span>Age:</span>18 years</li>
+                            <li><span>Location:</span>Desa Pengadan, Kaltim, Indonesia</li>
+                        </ul>
+                        <p class="bio"> I am an ordinary person who likes things related to technology and happens to be lucky 
                             to have a little experience about technology and others. Even though I only learned 
-                            using autodidactic methods because of a reason that required me to do so :)
-                        </p>
-                        
-                        <!-- Social Media Links -->
-                        <div class="social-icons">
-                            <a href="https://youtube.com/@BidzzOFC" target="_blank" rel="noopener" aria-label="YouTube" class="social-link youtube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                            <a href="https://github.com/Muhammadabid7" target="_blank" rel="noopener" aria-label="GitHub" class="social-link github">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="https://www.instagram.com/bidzz_ajagin/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://t.me/bidzz7/" target="_blank" rel="noopener" aria-label="Telegram" class="social-link telegram">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                            <a href="https://wa.me/6282350265164?text=Assalamualaikum+Bidzz" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-link whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
+                            using autodidactic methods because of a reason that required me to do so :)</p>
+                    </div>
+                </div>
+
+                <!-- Interests & Hobbies Card -->
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <i class="fas fa-heart"></i>
+                        <h3>Interests &amp; Hobbies</h3>       
+                    </div>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Coding</span>
                         </div>
-                        
-                        <!-- Call to Action Button -->
-                        <a href="assets/index.html" class="btn" target="_blank" rel="noopener">
-                            See More
+                        <div class="interest-item">
+                            <i class="fas fa-book"></i>
+                            <span>Reading</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-route"></i>
+                            <span>Strolling</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-headphones"></i>
+                            <span>Music</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Card -->
+                <div class="about-card achievements" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Achievements</h3>
+                    </div>
+                    <ul class="achievement-list">
+                        <li>Trusted by many for my skills and expertise</li>
+                        <li>Has a thriving social media community</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+            
+            <!-- Development Skills -->
+            <div class="skills-category" data-aos="fade-up">
+                <h3 class="category-title">Development Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript, PHP, React JS</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="80"></div>
+                        </div>
+                        <span class="percentage">80%</span>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>Automation, Web Scraping, Data Science</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="50"></div>
+                        </div>
+                        <span class="percentage">40%</span>
+                        </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-ghost"></i>
+                        </div>
+                        <h3>Reverse Engginering</h3>
+                        <p>Searching for security holes in android applications</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="50"></div>
+                        </div>
+                        <span class="percentage">87%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Creation Skills -->
+            <div class="skills-category" data-aos="fade-up">
+                <h3 class="category-title">Educational Content</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <h3>YouTube</h3>
+                        <p>Education and Tutorials</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="40"></div>
+                        </div>
+                        <span class="percentage">40%</span>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3>Telegram</h3>
+                        <p>Education, Tutorials, Stories, and Sales</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="85"></div>
+                        </div>
+                        <span class="percentage">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development Skills -->
+            <div class="skills-category" data-aos="fade-up">
+                <h3 class="category-title">Web Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                        <p>HTML, CSS, JavaScript, Responsive Design</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="80"></div>
+                        </div>
+                        <span class="percentage">80%</span>
+                    </div>
+                    <div class="skill-card" data-tilt>
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                        <p>API Integration, Database Management</p>
+                        <div class="progress-bar">
+                            <div class="progress" data-value="45"></div>
+                        </div>
+                        <span class="percentage">38%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>Bidzz Official 🇮🇩</h3>
+                    <p>Tutorials and Education</p>
+                    <a href="https://youtube.com/@bidzzofc" class="btn primary" target="_blank">View Channel</a>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Projects</h3>
+                    <p>Explore my projects and contributions on GitHub</p>
+                    <a href="https://github.com/Muhammadabid7" class="btn primary" target="_blank">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media" class="social-media">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Social Media Presence</h2>
+            <div class="social-stats-grid">
+                <div class="social-stat-card youtube" data-aos="fade-up">
+                    <div class="platform-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="platform-info">
+                        <h3>Bidzz Official</h3>
+                        <div class="stat-number">
+                            <span class="counter" data-target="1462">0</span>
+                            <span class="stat-label">Subscribers</span>
+                        </div>
+                        <a href="https://youtube.com/@bidzzofc" class="platform-link" target="_blank">
+                            <span>Visit Channel</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="social-stat-card instagram" data-aos="fade-up" data-aos-delay="200">
+                    <div class="platform-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="platform-info">
+                        <h3>bidzz_official</h3>
+                        <div class="stat-number">
+                            <span class="counter" data-target="2947">0</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <a href="https://www.instagram.com/bidzz_official" class="platform-link" target="_blank">
+                            <span>Follow Me</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="social-stat-card telegram" data-aos="fade-up" data-aos-delay="200">
+                    <div class="platform-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="platform-info">
+                        <h3>Bidzz Official Community</h3>
+                        <div class="stat-number">
+                            <span class="counter" data-target="3751">0</span>
+                            <span class="stat-label">Members</span>
+                        </div>
+                        <a href="https://t.me/cheatbybidzz" class="platform-link" target="_blank">
+                            <span>Join Channel</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                
                         </a>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+            <div class="contact-content">
+                <form id="contactForm" class="contact-form" data-aos="fade-right">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+                <div class="social-links" data-aos="fade-left">
+                    <a href="https://youtube.com/@bidzzofc" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/bidzz_official" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/cheatbybidzz" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="https://github.com/Muhammadabid7" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
+    <!-- JavaScript -->
+    <script>
+        // Token Bot Telegram dan Chat ID
+        const botToken = "8095229589:AAHFmq3F3_dJ0azrMYLaAVA5ebgN23U-s9g";
+        const USER_ID = '6927843435';
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const messageText = `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`;
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: USER_ID,
+                    text: messageText,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Pesan terkirim!");
+                    document.getElementById("contactForm").reset();
+                } else {
+                    alert("Gagal mengirim pesan.");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Terjadi kesalahan.");
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made by Bidzz Official</p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Vanilla Tilt -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
-
-    <!-- Particles Config -->
-    <script>
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('particles.js loaded');
-        });
-    </script>
-
-    <!-- Initialize Tilt -->
-    <script>
-        VanillaTilt.init(document.querySelector(".home-img"), {
-            max: 25,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.5,
-        });
-    </script>
-
-    <!-- No Script Fallback -->
-    <noscript>
-        <div class="noscript-message">
-            Please enable JavaScript to view this website properly.
-        </div>
-    </noscript>
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "BIDZZ",
-        "url": "https://bidzz-rawr.github.io/ABOUT-ME",
-        "sameAs": [
-            "https://youtube.com/@BidzzOFC",
-            "https://github.com/Muhammadabid7",
-            "https://www.instagram.com/bidzz_ajagin/",
-            "https://t.me/bidzz7/"
-        ],
-        "jobTitle": "Software Developer",
-        "description": "Software Developer, Reverse Engineer, and Tech Enthusiast"
-    }
-    </script>
-
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').then(registration => {
-                    console.log('ServiceWorker registration successful');
-                }).catch(err => {
-                    console.log('ServiceWorker registration failed', err);
-                });
-            });
-        }
-    </script>
+    <script src="js/dist-aos.js"></script>
+    <script src="js/2.0.0-particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/5080-js-main.js"></script>
+    <script src="js/3664-js-animations.js"></script>
+    <script src="js/6746-js-dark-mode.js"></script>
 </body>
 </html>
