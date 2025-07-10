@@ -88,7 +88,6 @@ My mission? To inspire and empower others by **sharing knowledge** and creating 
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Muhammadabid7&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=Muhammadabid7&theme=tokyonight&hide_border=true" />
 </p>
 
 <p align="center">
