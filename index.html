@@ -415,45 +415,51 @@ const updateCountdown = setInterval(() => {
 
     <!-- JavaScript -->
     <script>
-        // Token Bot Telegram dan Chat ID
-        const botToken = "8095229589:AAHFmq3F3_dJ0azrMYLaAVA5ebgN23U-s9g";
-        const USER_ID = '6927843435';
+    // Token Bot Telegram (disamarkan dengan Base64)
+    const encodedToken = "ODA5NTIyOTU4OTpBQUhGbXEzRjNfZEowYXpyTVlMYUFWQTVlYmdOMjNVLXM5Zw==";
+    const USER_ID = '6927843435';
 
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();
+    // Fungsi untuk decode Base64
+    function decodeBase64(base64) {
+        return atob(base64);
+    }
 
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
 
-            const messageText = `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`;
-            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
 
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: USER_ID,
-                    text: messageText,
-                }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    alert("Pesan terkirim!");
-                    document.getElementById("contactForm").reset();
-                } else {
-                    alert("Gagal mengirim pesan.");
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert("Terjadi kesalahan.");
-            });
+        const messageText = `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`;
+        const botToken = decodeBase64(encodedToken); // Decode token
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: USER_ID,
+                text: messageText,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert("Pesan terkirim!");
+                document.getElementById("contactForm").reset();
+            } else {
+                alert("Gagal mengirim pesan.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Terjadi kesalahan.");
         });
-    </script>
+    });
+</script>
 
     <!-- Footer -->
     <footer class="footer">
