@@ -1499,3 +1499,46 @@ img {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
+
+.privacy {
+    padding: 60px 0;
+    background-color: #1a1a1a; /* Sesuai mode gelap */
+    color: #ffffff;
+}
+
+.privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.privacy-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #007bff; /* Aksen biru seperti tombol */
+}
+
+.privacy-content p, .privacy-content ul {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.privacy-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.privacy-content a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .privacy {
+        padding: 40px 20px;
+    }
+    .privacy-content {
+        font-size: 14px;
+    }
+}
