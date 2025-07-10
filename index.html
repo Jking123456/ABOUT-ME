@@ -6,7 +6,7 @@
     <title>Bidzz Official</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css-style.css">
@@ -71,7 +71,7 @@
             </div>
             <div class="hero-text" data-aos="fade-left">
                 <div class="greeting">
-                    <span class="wave">👋</span>
+                    <span class="wave">&#128075;</span>
                     <span class="age-tag">18 years old</span>
                 </div>
                 <h1>Hey, I'm Bidzz</h1>
@@ -80,64 +80,63 @@
                 </div>
                 <p class="hero-description">Owner of Bidzz Official community</p>
                 <div class="btn-container" data-aos="fade-up">
-                    <a href="https://cv-muhammad-abid.netlify.app" class="btn primary">MY CV <i class="fas fa-briefcase"></i></a>
-                </div>
+    <a href="https://cv-muhammad-abid.netlify.app" class="btn primary">MY CV <i class="fas fa-briefcase"></i></a>
+            </div>
             </div>
         </div>
     </section>
 
-    <!-- Countdown Section -->
     <section id="countdown" class="countdown">
-        <div class="container">
-            <div class="countdown-content">
-                <div class="event-poster" data-aos="fade-right">
-                    <img src="logo-kebangsaanWkwk.png" alt="CodeFest 2025 Poster">
-                </div>
-                <div class="event-info" data-aos="fade-left">
-                    <h2 class="event-title">Challenge Event</h2>
-                    <p class="event-description">Join our next big event organized by Bidzz Official!</p>
-                    <div class="countdown-timer">
-                        <div class="timer-box">
-                            <span id="days">00</span>
-                            <span class="timer-label">Days</span>
-                        </div>
-                        <div class="timer-box">
-                            <span id="hours">00</span>
-                            <span class="timer-label">Hours</span>
-                        </div>
-                        <div class="timer-box">
-                            <span id="minutes">00</span>
-                            <span class="timer-label">Minutes</span>
-                        </div>
-                        <div class="timer-box">
-                            <span id="seconds">00</span>
-                            <span class="timer-label">Seconds</span>
-                        </div>
+    <div class="container">
+        <div class="countdown-content">
+            <div class="event-poster" data-aos="fade-right">
+                <img src="logo-kebangsaanWkwk.png" alt="CodeFest 2025 Poster">
+            </div>
+            <div class="event-info" data-aos="fade-left">
+                <h2 class="event-title">Challenge Event</h2>
+                <p class="event-description">Join our next big event organized by Bidzz Official!</p>
+                <div class="countdown-timer">
+                    <div class="timer-box">
+                        <span id="days">00</span>
+                        <span class="timer-label">Days</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours">00</span>
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes">00</span>
+                        <span class="timer-label">Minutes</span>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds">00</span>
+                        <span class="timer-label">Seconds</span>
                     </div>
                 </div>
-            </div>
+                
         </div>
-        <script>
-            // Countdown timer logic
-            const countdownDate = new Date("May 8, 2030 20:00:00").getTime();
-            const updateCountdown = setInterval(() => {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                document.getElementById("days").textContent = days.toString().padStart(2, '0');
-                document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
-                if (distance < 0) {
-                    clearInterval(updateCountdown);
-                    document.querySelector(".countdown-timer").innerHTML = "<p>Event has started!</p>";
-                }
-            }, 1000);
-        </script>
-    </section>
+    </div>
+    <script>
+        // Countdown timer logic remains unchanged
+const countdownDate = new Date("May 8, 2030 20:00:00").getTime();
+const updateCountdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("days").textContent = days.toString().padStart(2, '0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    if (distance < 0) {
+        clearInterval(updateCountdown);
+        document.querySelector(".countdown-timer").innerHTML = "<p>Event has started!";
+    }
+}, 1000);
+    </script>
+</section>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -166,7 +165,7 @@
                 <div class="about-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="card-header">
                         <i class="fas fa-heart"></i>
-                        <h3>Interests & Hobbies</h3>       
+                        <h3>Interests &amp; Hobbies</h3>       
                     </div>
                     <div class="interests-grid">
                         <div class="interest-item">
@@ -233,12 +232,12 @@
                             <div class="progress" data-value="50"></div>
                         </div>
                         <span class="percentage">40%</span>
-                    </div>
+                        </div>
                     <div class="skill-card" data-tilt>
                         <div class="skill-icon">
                             <i class="fa-solid fa-bug"></i>
                         </div>
-                        <h3>Reverse Engineering</h3>
+                        <h3>Reverse Engginering</h3>
                         <p>Searching for security holes in android applications</p>
                         <div class="progress-bar">
                             <div class="progress" data-value="50"></div>
@@ -345,7 +344,7 @@
                     <div class="platform-info">
                         <h3>Bidzz Official</h3>
                         <div class="stat-number">
-                            <span class="counter">0</span>
+                            <span class="counter" data-target="1462">0</span>
                             <span class="stat-label">Subscribers</span>
                         </div>
                         <a href="https://youtube.com/@bidzzofc" class="platform-link" target="_blank">
@@ -361,7 +360,7 @@
                     <div class="platform-info">
                         <h3>bidzz_official</h3>
                         <div class="stat-number">
-                            <span class="counter">0</span>
+                            <span class="counter" data-target="2945">0</span>
                             <span class="stat-label">Followers</span>
                         </div>
                         <a href="https://www.instagram.com/bidzz_official" class="platform-link" target="_blank">
@@ -377,12 +376,15 @@
                     <div class="platform-info">
                         <h3>Bidzz Official Community</h3>
                         <div class="stat-number">
-                            <span class="counter">0</span>
+                            <span class="counter" data-target="3751">0</span>
                             <span class="stat-label">Members</span>
                         </div>
                         <a href="https://t.me/cheatbybidzz" class="platform-link" target="_blank">
                             <span>Join Channel</span>
                             <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                
                         </a>
                     </div>
                 </div>
@@ -411,7 +413,7 @@
         </div>
     </section>
 
-    <!-- JavaScript for Contact Form -->
+    <!-- JavaScript -->
     <script>
         // Token Bot Telegram dan Chat ID
         const botToken = "8095229589:AAHFmq3F3_dJ0azrMYLaAVA5ebgN23U-s9g";
@@ -467,6 +469,5 @@
     <script src="5080-js-main.js"></script>
     <script src="3664-js-animations.js"></script>
     <script src="6746-js-dark-mode.js"></script>
-    <script src="socialMediaAPI.js"></script>
 </body>
 </html>
